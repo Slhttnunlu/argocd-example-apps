@@ -16,6 +16,6 @@ spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
         name: guestbook-ui
-        command: ["sh", "-c", "while true; do echo 'deployment update - ' date; sleep 2; done"]
+        command: ["sh", "-c", "while true; do echo 'deployment update - ' $(date); sleep 2; done"]
         ports:
         - containerPort: 80
